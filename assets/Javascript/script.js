@@ -1,4 +1,3 @@
-const URL = "https:/viacep.com.br/ws/[CEP_VALOR]/json/";
 const inputCep = document.getElementById("input-cep");
 const inputRua = document.getElementById("input-rua");
 const inputBairro = document.getElementById("input-bairro");
@@ -12,8 +11,8 @@ async function consultarCep () {
         if (inputCep.value.length != 8) {
             throw new Error("O campo de CEP tem que ter 8 digítos");
         }
-        const urlReal = URL.replace("[CEP_VALOR]", inputCep.value);
-        const resp = await fetch(urlReal);
+        const cep = inputCep.value;
+        const resp = await fetch(`https:/viacep.com.br/ws/${cep}/json/`);
         const obj = await resp.json();
 
         atribuirValores(obj);
