@@ -8,10 +8,10 @@ inputCep.addEventListener("focusout", consultarCep);
 
 async function consultarCep () {
     try {
-        if (inputCep.value.length != 8) {
-            throw new Error("O campo de CEP tem que ter 8 digítos");
-        }
         const cep = inputCep.value;
+        if (isNaN(cep) || cep.length != 8) {
+            throw new Error("CEP Inválido! Certifique-se de que a sequência possua 8 dígitos e tenha apenas números válidos.");
+        }
         const resp = await fetch(`https:/viacep.com.br/ws/${cep}/json/`);
         const obj = await resp.json();
 
