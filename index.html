@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="./assets/Css/style.css">
+    <link rel="stylesheet" href="./assets/Css/responsive.css">
+</head>
+<body>
+    <form id="consultar-form">
+        <h1>Consultar CEP</h1>
+    <div class="container">
+        <div class="alinhamento-input">
+            <label for="input-cep">Digite o CEP:</label>
+            <input type="text" placeholder="Ex: 01001000" id="input-cep" required minlength="8" maxlength="8"/>
+        </div>
+        <div class="alinhamento-input">
+        <label for="input-rua">Digite a rua:</label>
+        <input type="text" placeholder="Ex: Rua Paulista" id="input-rua" required/>  
+        </div>
+    </div>
+    <div class="container">
+        <div class="alinhamento-input">
+            <label for="input-bairro">Digite o bairro:</label>
+            <input type="text" placeholder="Ex: Jardim Conceição" id="input-bairro" required/>
+        </div>
+        <div class="alinhamento-input">
+        <label for="input-cidade">Digite a cidade:</label>
+        <input type="text" placeholder="Ex: Osasco" id="input-cidade" required/>  
+        </div>
+    </div>
+    </form>
+    <script src="./assets/Javascript/script.js"></script>
+</body>
+</html>

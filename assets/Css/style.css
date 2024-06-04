@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(180, 203, 221, 0.774);
+}
+
+#consultar-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(178, 192, 207);
+    border-radius: 10px;
+    padding: 45px;
+    box-shadow: 5px 5px 8px rgb(68, 68, 68);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.alinhamento-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+input:invalid {
+    border-color: red;
+}
