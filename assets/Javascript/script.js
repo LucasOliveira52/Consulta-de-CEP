@@ -12,11 +12,7 @@ async function consultarCep () {
         if (isNaN(cep) || cep.length != 8) {
             throw new Error("CEP Inválido! Certifique-se de que a sequência possua 8 dígitos e tenha apenas números válidos.");
         }
-        const resp = await fetch(`https:/viacep.com.br/ws/${cep}/json/`, {
-            headers:{
-                accept: 'aplication/json', 'user-agent': 'learning app',
-            }
-        });
+        const resp = await fetch(`https:/viacep.com.br/ws/${cep}/json/`);
         const obj = await resp.json();
 
         atribuirValores(obj);
